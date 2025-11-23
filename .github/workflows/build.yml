@@ -69,3 +69,5 @@ jobs:
       - name: Upload new version
         if: ${{ !contains(github.ref_name, 'beta') }}
         run: git push origin last
+on: workflow_dispatch
+
