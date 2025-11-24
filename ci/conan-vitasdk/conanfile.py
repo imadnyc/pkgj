@@ -30,7 +30,7 @@ class VitasdkToolchainConan(ConanFile):
         ]
         for lib in additional_libs:
             lib = "{}.tar.xz".format(lib)
-            files.download(self, "http://dl.vitasdk.org/{}".format(lib), filename=lib)
+            files.download(self, "https://github.com/vitasdk/packages/releases/download/master/{}".format(lib), filename=lib)
             files.unzip(self, lib, os.path.join("vitasdk", "arm-vita-eabi"))
 
     def package(self):
